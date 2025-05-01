@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+</head>
+<body  style="background-color: lightblue;">
+    <!--
+    <h1 th:text="${mensaje}">  hhhhhhhh</h1>
+    <h2> Hoy es : [[${fecha}]]</h2> 
+    -->
+
+    <h1>Bienvenido</h1>
+    <h2>Oferta de trabajo</h2>
+    <h3 th:text=" 'Titulo:  ' +  ${nombre} "></h3>
+    <h3 th:text=" 'fecha :  ' +  ${fechaPub} "></h3>
+    <h3 th:text=" 'salario:  '+  ${salario} "></h3>
+    <h3 th:text=" 'activo:  ' + ${boolean} "></h3>
+    
+
+</body>
+</html>

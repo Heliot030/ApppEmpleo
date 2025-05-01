@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle empleos</title>
+</head>
+<body style="background-color: rgb(90, 179, 227);">
+    
+    <h1>Listade Vacantes</h1>
+    <h3 th:text ="'Nombre : ' + ${vacante.nombre}"></h3>
+    <h3 th:text ="'fecha de publicacion : ' + ${vacante.fecha}"></h3>
+    <h3 th:text ="'pretencion ecomica : ' + ${vacante.salario}"></h3>
+    <h3 th:text ="'descripcion : ' + ${vacante.descripcion}"></h3>
+</body>
+</html>

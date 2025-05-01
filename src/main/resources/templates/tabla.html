@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(90, 179, 227);">
+    <h1>Lista de vacantes</h1>
+    <table style="width:100%" border="2">
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>fecha de publicacion</th>
+          <th>Salario Ofrecido</th>
+          <th>Descripcion</th>
+        </tr>
+        <tr th:each="vacante:${vacantes}" >
+        <th th:text="${vacante.id}"></th>
+        <th th:text="${vacante.nombre}"></th>
+        <th th:text="${vacante.fecha}"></th>
+        <th th:text="${vacante.Salario}"></th>
+        <th th:text="${vacante.descripcion}"></th>
+        </tr>
+      
+      </table> 
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de empleos</title>
+</head>
+<body style="background-color: rgb(90, 179, 227);">
+   <!--  
+    <tr th:each = "tmpEmp: ${empleos}">
+        <td th:text="${tmpEmp}"></td>
+    </tr>
+    -->
+    <h1>Listade Vacabtes</h1>
+    <ol>
+        <li th:each = "tmpEmp: ${empleos}" th:text="${tmpEmp}"></li>
+        <td ></td>
+    </ol>
+
+</body>
+</html>
