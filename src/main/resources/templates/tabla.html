@@ -5,26 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
 </head>
-<body style="background-color: rgb(90, 179, 227);">
-    <h1>Lista de vacantes</h1>
-    <table style="width:100%" border="2">
+<body style="background-color: rgb(237, 238, 239);">
+    <img th:src="@{/imagenes/logo.png}" width="130" height="130" alt="">
+    <h1 class="text-primary">Lista de vacantes</h1>
+    <table class="table table-dark table-striped table-bordered table-hover" style="width:100%" >
         <tr>
+          <th>Logo</th>
           <th>Id</th>
           <th>Nombre</th>
           <th>fecha de publicacion</th>
           <th>Salario Ofrecido</th>
           <th>Descripcion</th>
+          <th>Destacada</th>
         </tr>
+        
         <tr th:each="vacante:${vacantes}" >
-        <th th:text="${vacante.id}"></th>
-        <th th:text="${vacante.nombre}"></th>
-        <th th:text="${vacante.fecha}"></th>
-        <th th:text="${vacante.Salario}"></th>
-        <th th:text="${vacante.descripcion}"></th>
+          <td >
+            <img th:src = "@{/imagenes/{img}(img = ${vacante.imagen})}" width="130" height="130">
+          </td>
+        <td th:text="${vacante.id}"></td>
+        <td th:text="${vacante.nombre}"></td>
+        <td th:text="${vacante.fecha}"></td>
+        <td th:text="${vacante.Salario}"></td>
+        <td th:text="${vacante.descripcion}"></td>
+        <!--
+        <th th:text="${vacante.destacado == 1 ? 'SI' : 'NO'}"></th>
+        -->
+      <td>
+          <span th:if="${vacante.destacado==1}" class="badge  text-bg-success"> Si</span>
+          <span th:unless="${vacante.destacado==1}" class="badge  text-bg-danger"> NO</span>
+      </td>
+
         </tr>
       
-      </table> 
-    
+      </table>
+      
+      
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
