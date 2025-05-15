@@ -30,7 +30,7 @@ public class VacantesServiceImpl implements IVacantesService {
 
             Vacante vacante2 = new Vacante();
             vacante2.setId(2);
-            vacante2.setNombre("Cintador Publico");
+            vacante2.setNombre("Contador Publico");
             vacante2.setDescripcion("conta con 5 años de experiencia");
             vacante2.setFecha(sdf.parse("04-02-2025"));
             vacante2.setSalario(9999.00);
